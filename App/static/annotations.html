@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Annotation WebApp</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="static/CSS/recogito.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/Js/Recogito/recogito.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+        <div class="container-fluid">
+            <div class="row">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link">Web Annotation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">documents</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-2 mt-3">
+                <div class="row mb-3 border-bottom">
+                    <div class="col-6 border-end">
+                        <strong>Title:</strong>
+                    </div>
+                    <div class="col-6">
+                        <p id="title" style="color: grey"></p>
+                    </div>
+                </div>
+                <div class="row border-bottom">
+                    <div class="col-6  border-end">
+                        <div class="mb-2">
+                            <strong >Entity annotations:</strong>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p id="countE" style="color: grey"></p>
+                    </div>
+                </div>
+                <div class="row border-bottom">
+                    <div class="col-6  border-end">
+                        <strong >Relational annotations:</strong>
+                    </div>
+                    <div class="col-6">
+                        <p id="countR" style="color: grey"></p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6">
+                        <div id="toggle" class="btn btn-primary w-100" type="button">Entities</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="dropdown">
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filter
+                            </button>
+                            <ul id="filter" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            </ul>
+                        </div>
+                    </div>
+                    
+                 </div>
+                 <div class="row mt-4">
+                    <div class="col-6">
+                        <button id="spacy" class = "btn btn-danger w-100">Run spaCy</button>
+                    </div>
+                    <div class="col-6">
+                        <div id="loading" class="spinner-border ms-3 invisible" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="col-9">
+                <div class="border border-grey" id="content"
+                    style=" background-color: rgb(246, 246, 246); overflow-wrap: break-word; line-height: 3; font-size: 1.2em;">
+
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="/static/Js/annotations.js"></script>
+</body>
+
+</html>
